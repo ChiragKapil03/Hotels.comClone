@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: top;
+            justify-content:center;
+            position: relative;
+            /* overflow: hidden; */
+            height: 100vh;
+            width: 100vw;
+            background: rgba(230, 227, 227, 0.279); /* Optional background color */
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: url('/Assets-chirag/Background.png') no-repeat top; */
+            background-color: rgba(250, 235, 215, 0.156);
+            background-size:contain;
+            filter: blur(10px);
+            z-index: -2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 700px;
+            height: 700px;
+            margin-top: 1%;
+            margin-right: 5%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+            box-sizing: border-box;
+        }
+
+        .go-back {
+            text-decoration: none;
+            font-size: large;
+            font-weight: 800;
+            background-color: white;
+            color: rgb(0, 119, 255);
+            border: 0px;
+            border-radius: 20px;
+            cursor: pointer;
+            align-self: flex-end; /* Align to the right */
+            padding: 5px 10px;
+        }
+
+        .go-back:hover {
+            background-color: rgba(85, 164, 255, 0.548);
+            color: black;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        .h3 {
+            font-weight: 500;
+            margin: 10px 0;
+            color: black;
+            font-weight:700 ;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        hr{
+            color: rgb(117, 117, 117);
+        }
+
+        p{
+            font-size: small;
+        }
+        .buttons{
+            margin-top: 15px;
+            margin-left: 5px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button{
+            padding: 4px;
+            border-radius: 30px;
+            background-color: rgba(0, 123, 255, 0.43);
+            /* border: blue; */
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../Links-Chirag/help-center.html"><button class="go-back">X</button><span class="h3">Explore help articles</span></a>
+        <hr>
+        <h3>Refund timelines, policies and processes </h2>
+        <p>Due to COVID-19, most refunds for flights, including when they’re part of a package, are issued within 12 weeks. Some refunds could take a bit longer, depending on the airline. <br>
+
+            Refunds for hotels, cars or activities, including when they’re part of a package, are processed within our normal time-frame—24 hours from the cancellation request. Keep in mind, your bank or payment service determines when the funds become available in your account. <br>
+            
+            In other circumstances not impacted by COVID-19, here’s what you should know about refund timelines: <br>
+            
+            Expecting money back from changing or cancelling your hotel or holiday home booking?</p><br>
+            <h5 style="margin: 0;">If you paid with a credit or debit card</h5>
+            <ul>
+                <li>
+                    <p>Hotels.com will process your refund and credit the card you used for your booking within 24 hours. Once that has happened, your bank will take care of the rest. Just know that it may take them up to 7 days to post the credit to your account, and up to 2 billing cycles to show on your statement.
+                    </li></p>
+                <li>
+                    <p>More than 7 days and still no refund on your account? Get in touch with your bank or card company to check on the status.</p>    
+                </li>
+            </ul>
+            <h5 style="margin: 0; padding: 0;">If you paid with a gift card</h5>
+            <ul>
+                <li>
+                    <p>
+                        Within 4 hours of processing your refund, we’ll send you a new gift card for the refunded amount to the email you used when booking.
+                    </li></p>
+            </ul>
+            <hr>
+            <h5 style="margin: 0;">Was this topic helpful?</h5>
+            <div class="buttons">
+                <button><span class="material-symbols-outlined">thumb_up</span>
+                </button>
+                <button><span class="material-symbols-outlined">thumb_down</span>
+                </button>
+            </div>
+            
+            
+            
+    </div>
+</body>
+</html>
