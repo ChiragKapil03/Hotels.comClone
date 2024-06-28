@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(230, 227, 227, 0.279); /* Optional background color */
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/Assets-chirag/Background.png') no-repeat top;
+            background-size: cover;
+            filter: blur(10px);
+            z-index: -2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+            box-sizing: border-box;
+        }
+
+        .go-back {
+            text-decoration: none;
+            font-size: large;
+            font-weight: 800;
+            background-color: white;
+            color: rgb(0, 119, 255);
+            border: 0px;
+            border-radius: 20px;
+            cursor: pointer;
+            align-self: flex-end; /* Align to the right */
+            padding: 5px 10px;
+        }
+
+        .go-back:hover {
+            background-color: rgba(85, 164, 255, 0.548);
+            color: black;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .dropdown {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .button {
+            width: 100%;
+            height: 50px;
+            border-radius: 30px;
+            margin-top: 10px;
+            background-color: rgb(0, 123, 255);
+            font-size: 20px;
+            border-color: rgb(0, 123, 255);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html"><button class="go-back">X</button></a>
+        <h3><img width="26" height="22" src="https://img.icons8.com/ios-filled/50/error--v1.png" alt="error--v1"/> Changing your region could change your rewards programme</h3>
+        <p>To stay with your current rewards programme keep your region the same. One Key is currently only available in select regions.</p>
+        <form action="">
+            <label for="Region">Region</label>
+            <select id="basic-dropdown" name="options" class="dropdown">
+                <option value="option1">Argentina</option>
+                <option value="option2">Afghanistan</option>
+                <option value="option3">Australia</option>
+                <option value="option4">Austria</option>
+                <option value="option5">Belgium</option>
+                <option value="option6">Brazil</option>
+                <option value="option7">Canada</option>
+                <option value="option8">Chile</option>
+                <option value="option9">China</option>
+                <option value="option10">Colombia</option>
+                <option value="option11">Denmark</option>
+                <option value="option12">Finland</option>
+                <option value="option13">France</option>
+                <option value="option14">Germany</option>
+                <option value="option15" selected>India</option>
+                <option value="option16">USA</option>
+                <option value="option17">UK</option>
+                <option value="option18">Hong Kong</option>
+            </select><br><br>
+            <label for="Language">Language</label>
+            <select id="basic-dropdown2" name="options" class="dropdown">
+                <option value="option1">English</option>
+                <option value="option2">Hindi</option>
+            </select><br><br>
+            <label for="Currency">Currency</label>
+            <select id="basic-dropdown3" name="options" class="dropdown">
+                <option value="option1" default>INR $</option>
+            </select><br><br>
+            <a href="../index.html"><button class="button">Save</button></a>
+            
+        </form>
+    </div>
+</body>
+</html>
