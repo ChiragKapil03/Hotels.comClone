@@ -1,0 +1,111 @@
+.sign-in-box,
+.img-VIP-Access {
+  background-color: #191e3b;
+}
+
+.card-container {
+  width: 75%;
+}
+
+.card-container .filterSection {
+  display: none;
+}
+
+.card-container .single-cardBox .linkeButton .fillLike {
+  display: none;
+}
+
+.card-container .single-cardBox .linkeButton:hover .unfillLike {
+  display: none;
+}
+
+.card-container .single-cardBox .linkeButton:hover .fillLike {
+  display: block;
+}
+
+.card-container .single-cardBox .img-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+/* Animation img>button */
+.next-button:hover .arrow {
+  animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.prev-button:hover .arrow {
+  animation: slide-in-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.next-button:active,
+.prev-button:active {
+  transform: scale(0.97);
+}
+
+/*------ Media Queires----- */
+
+@media screen and (max-width: 912px) {
+  .container {
+    width: 100%;
+  }
+
+  .sidebarSection_mainSection {
+    flex-direction: column;
+  }
+
+  .sidebarSection_mainSection .sideBar,
+  .card-container .sortBy_section {
+    display: none;
+  }
+
+  .card-container .filterSection {
+    display: flex;
+  }
+
+  .card-container .properties {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .sidebarSection_mainSection .card-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container .single-cardBox .hotel-details .reviews-prices {
+    flex-direction: column;
+  }
+
+  .card-container .reviews,
+  .card-container .prices {
+    width: 100%;
+  }
+}
