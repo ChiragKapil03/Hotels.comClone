@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort & Filter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="max-w-full mx-auto p-4">
+        <div class="p-4">
+
+            <!-- Sort & filter -->
+            <div class="flex justify-between items-center mb-4">
+                <div class="cancelBtn flex items-center gap-2">
+                    <a href="/">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                                <path fill="#361ef1"
+                                    d="M8.47 8.47a.75.75 0 0 1 1.06 0L12 10.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L13.06 12l2.47 2.47a.75.75 0 0 1-1.06 1.06L12 13.06l-2.47 2.47a.75.75 0 1 1-1.06-1.06L10.94 12L8.47 9.53a.75.75 0 0 1 0-1.06" />
+                                <path fill="#1669e3" fill-rule="evenodd"
+                                    d="M7.317 3.769a42.502 42.502 0 0 1 9.366 0c1.827.204 3.302 1.643 3.516 3.48c.37 3.157.37 6.346 0 9.503c-.215 1.837-1.69 3.275-3.516 3.48a42.5 42.5 0 0 1-9.366 0c-1.827-.205-3.302-1.643-3.516-3.48a40.903 40.903 0 0 1 0-9.503c.214-1.837 1.69-3.276 3.516-3.48m9.2 1.49a41.001 41.001 0 0 0-9.034 0A2.486 2.486 0 0 0 5.29 7.424a39.402 39.402 0 0 0 0 9.154a2.486 2.486 0 0 0 2.193 2.164c2.977.332 6.057.332 9.034 0a2.486 2.486 0 0 0 2.192-2.164a39.401 39.401 0 0 0 0-9.154a2.486 2.486 0 0 0-2.192-2.163"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </a>
+                    <h2 class="text-lg font-bold">Sort & filter</h2>
+                </div>
+                <a href="/">
+                    <button type="submit" class="text-blue-500 font-bold">
+                        Clear
+                    </button>
+                </a>
+            </div>
+
+            <!-- Compare properties -->
+            <div class="mb-5 flex justify-between w-full text-sm ">
+                <div>
+                    <span class="text-gray-700 font-medium">
+                        Compare properties
+                    </span>
+                    <p class="text-gray-500 text-xs">Select "Compare" in search results to start.</p>
+                </div>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                            <path fill="#141bf0" fill-rule="nonzero" d="M14 12a2 2 0 1 1 4 0a2 2 0 0 1-4 0" />
+                            <path fill="#141bf0"
+                                d="M8 5a7 7 0 0 0 0 14h8a7 7 0 1 0 0-14zm8 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <!--Horizontal Line  -->
+            <hr>
+            <div class="boder border-b border-1  border-gray-300 "></div>
+            <br>
+
+            <!-- Sort by -->
+            <div class="border border-gray-500 rounded-lg h-12 mb-6">
+                <div class="text-xs font-bold px-1">
+                    Sort by
+                </div>
+                <select class="w-full text-xs" name="plan" id="">
+                    <option disabled selected>Recommended</option>
+                    <option value="Price-low">Price : low to high</option>
+                    <option value="Price-high">Price : high to low</option>
+                    <option value="rating + choices">Guest rating + our choices</option>
+                    <option value="Property class">Property class</option>
+                </select>
+            </div>
+
+            <!--Horizontal Line  -->
+            <hr>
+            <div class="boder border-b border-1  border-gray-300 "></div>
+            <br>
+
+            <!-- Search by property name -->
+            <div class="mb-2">
+                <label for="property-search" class="block text-sm mb-2 font-semibold">
+                    Search by property name
+                </label>
+                <input type="text" id="property-search" placeholder="e.g. Marriott"
+                    class="w-full px-9 h-10 cursor-pointer border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+                <span class="flex relative bottom-7 left-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14" />
+                    </svg>
+                </span>
+            </div>
+
+            <!--Horizontal Line  -->
+            <div class="boder border-b border-1  border-gray-200 "></div>
+            <br>
+
+            <!-- Filters Section -->
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold mb-2">Filter by</h2>
+                <div class="space-y-2 mt-2">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox" checked>
+                        <span>Spa</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>House boat</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>Pool</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>All inclusive</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>Villa</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Price per night -->
+            <div class="mb-4 w-full">
+                <label for="price-range" class="block text-sm mb-2 font-semibold">
+                    Price per night
+                </label>
+                <div class="flex gap-4  mb-4">
+                    <div class="min-range relative">
+                        <input type="number" id="price-range" placeholder="₹0"
+                            class=" w-full pl-3 h-16 cursor-pointer border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <span class="flex absolute font-semibold  bottom-10 left-3">min</span>
+                    </div>
+                    <div class="max-range relative">
+                        <input type="number" id="price-range" placeholder="₹28,000+"
+                            class=" w-full pl-3 h-16 cursor-pointer border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <span class="flex absolute  font-semibold  bottom-10 left-3">max</span>
+                    </div>
+                </div>
+                <input type="range" min="0" max="28000" class="w-full">
+            </div>
+
+
+            <!-- Amenities -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Amenities</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2" checked> Spa
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Pool
+                </label>
+                <label class="block mb-3">
+                    <input type="checkbox" class="mr-2"> Ocean view
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Stay options -->
+            <div class="mb-4 mb-1">
+                <h3 class="font-semibold mb-1">Stay options</h3>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2" checked> Any
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Hotels, resorts, and more
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Entire homes, apartments, and more
+                </label>
+            </div>
+
+            <!-- Property type -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Property type</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> House boat
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Villa
+                </label>
+                <label class="block mb-3">
+                    <input type="checkbox" class="mr-2"> Hotel resort
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Meal plans available -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Meal plans available</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> All inclusive
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Breakfast included
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Dinner included
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Lunch included
+                </label>
+            </div>
+
+            <!-- Payment type -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Payment type</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Reserve now, pay later
+                </label>
+            </div>
+
+            <!-- Property cancellation options -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Property cancellation options</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Fully refundable property
+                </label>
+            </div>
+
+            <!-- Property class -->
+            <div class="mb-5 mb-1">
+                <h3 class="font-semibold mb-1">Property class</h3>
+                <div class="stars flex gap-3 flex-wrap">
+                    <div class="star1  flex items-center px-2 py-1 border border-gray-400 rounded-lg">
+                        1
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+                        </svg>
+                    </div>
+                    <div class="star2  flex items-center px-2 py-1 border border-gray-400 rounded-lg">
+                        2
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+                        </svg>
+                    </div>
+                    <div class="star3  flex items-center px-2 py-1 border border-gray-400 rounded-lg">
+                        3
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+                        </svg>
+                    </div>
+                    <div class="star4  flex items-center px-2 py-1 border border-gray-400 rounded-lg">
+                        4
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+                        </svg>
+                    </div>
+                    <div class="star5  flex items-center px-2 py-1 border border-gray-400 rounded-lg">
+                        5
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cities -->
+            <div class="mb-5 mb-1">
+                <h3 class="font-semibold mb-1">Cities</h3>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Gurugram
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Shimla
+                </label>
+                <label class="block mb-3">
+                    <input type="radio" name="stay-option" class="mr-2"> Chandigarh
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Popular Locations -->
+            <div class="mb-5 mb-1">
+                <h3 class="font-semibold mb-1">Popular locations</h3>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Bandhavgarh National Park
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="stay-option" class="mr-2"> Kovalam Beach
+                </label>
+                <label class="block mb-3">
+                    <input type="radio" name="stay-option" class="mr-2"> U.S. Consulate General
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Guest rating -->
+            <div class="mb-4 mb-1">
+                <h3 class="font-semibold mb-1">Guest rating</h3>
+                <label class="block mb-1">
+                    <input type="radio" name="Guest rating" class="mr-2" checked>Any
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="Guest rating" class="mr-2">Wonderful 9+
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="Guest rating" class="mr-2"> Very good 8+
+                </label>
+                <label class="block mb-1">
+                    <input type="radio" name="Guest rating" class="mr-2"> Good 7+
+                </label>
+            </div>
+
+            <!-- hotels.com Rewards -->
+            <div class="mb-4">
+                <h3 class="font-semibold mb-1">Hotels.com Rewards</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Redeem reward nights
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2">
+                    VIP Access properties A collection of top-rated stays
+                </label>
+            </div>
+
+            <!-- Accessibility -->
+            <div class="mb-5">
+                <h3 class="font-semibold mb-1">Accessibility</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Stair-free path to entrance
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Service animals allowed
+                </label>
+                <label class="block mb-3">
+                    <input type="checkbox" class="mr-2"> Elevator
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Traveler experience -->
+            <div class="mb-16">
+                <h3 class="font-semibold mb-1">Traveler experience</h3>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2"> Eco-certified
+                </label>
+                <label class="block mb-1">
+                    <input type="checkbox" class="mr-2">LGBTQ welcoming
+                </label>
+                <label class="block mb-3">
+                    <input type="checkbox" class="mr-2"> Business friendly
+                </label>
+                <label class="block mb-3">
+                    <input type="checkbox" class="mr-2"> Family friendly
+                </label>
+                <a href="/" class="text-blue-600 hover:underline font-semibold">See more</a>
+            </div>
+
+            <!-- Done button -->
+            <div class="w-full px-3 py-2 fixed bottom-0 left-0"
+                style="background-image: linear-gradient(0deg, hsla(0,0%,100%,.75) 88%, transparent), linear-gradient(0deg,hsla(0,0%,100%,.75) 88%,hsla(0,0%,100%,0));;">
+                <button class="w-full bg-blue-500 text-white py-2 rounded-3xl font-bold ">
+                    Done
+                </button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
