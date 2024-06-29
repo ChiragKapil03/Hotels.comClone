@@ -3,6 +3,10 @@
 ### Clone of HOTELS.com which is made by Praveen Barfa, chirag kapil, Mayuri Patil, Shubham Sharma and bijeshwor Sharma under menotr Nikhil ###
 
 ### Header part is done by Chirag Kapil and all the links are made and attached by him in the header section ###
+ hotelProject
+![doneByChiragKapil](https://github.com/ChiragKapil03/Hotels.comClone/assets/156374521/1082c863-b697-4f00-a46c-ba2991dc0994)
+
+
 Project Presentation Summary
 
 1. Project Overview
@@ -51,4 +55,5 @@ Future Improvements: Ongoing user feedback will be crucial for continuous improv
 ![doneByChiragKapil-5](https://github.com/ChiragKapil03/Hotels.comClone/assets/156374521/5f38ac5a-8a16-4377-9fe9-cd581c77421d)
 
 ![doneByChiragKapil-6](https://github.com/ChiragKapil03/Hotels.comClone/assets/156374521/7c63d45a-19d4-46d0-99cc-9633fefb4f2d)
+ main
 
