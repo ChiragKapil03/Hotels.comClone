@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system, -apple-system, BlinkMacSystemFont, SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+  
+  }
+  a{
+    color: black;
+  }
+  
+  .card-container {
+    width: 70%;
+    margin-inline: auto;
+    /* background-color: brown; */
+  }
+  
+  .goBeyond {
+    padding: 10px;
+    /* text-align: center; */
+    color: rgb(39, 38, 38);
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  
+  .carousel {
+    /* background-color: yellow; */
+    padding: 10px 0px;
+    overflow-x: auto;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+   scroll-behavior: smooth;
+  }
+  .carousel-box{
+    position: relative;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-tracker {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.2s ease-in-out;
+   
+  }
+  
+  .carousel-slide {
+    flex: 0 0 calc(20% - 16px);
+    margin: 0 8px;
+    /* border:2px solid black; */
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  
+  .carousel-slide img {
+    /* width: 235px; */
+  width: 100%;
+  height: 100%;
+    display: block;
+    border-radius: 1rem;
+    object-fit: cover;
+
+  }
+  .carousel-caption {
+    position: absolute;
+    bottom: 10px; 
+    left: 10px; 
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .carousel-button{
+    position: absolute;
+    top:50%;
+    background-color: azure;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+   height: 50px;
+   width: 50px;
+   z-index: 9;
+   font-size: 2rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color .3s ,transform .2s ;
+   
+  }
+  .prev-carousel,.prev-explore ,.prev-weekend, .prev-unique{
+    left:-20px
+  }
+  .next-carousel, .next-explore , .next-weekend ,.next-unique{
+    right: -20px;
+  }
+  .carousel-button:hover{
+    background-color:  rgb(219, 230, 230);
+    /* transition: transform .2s ease-in-out; */
+  }
+
+    /* ----explore-card---- */
+
+.Explore-container{
+    margin-top: 2rem;
+    width: 70%;
+    margin-inline: auto;
+}
+
+  .explore-box2{
+    padding: 10px 0px;
+      overflow-x: auto;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+  }
+  .explore-box{
+    position: relative;
+  }
+  .explore-box2::-webkit-scrollbar {
+    display: none;
+  }
+  .explore-card a{
+    text-decoration:none;
+  }
+  .explore-cards{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  .explore-card {
+    flex: 0 0 calc(20% - 16px);
+    margin: 0 8px;
+    border:1px solid rgb(157, 152, 152);
+    border-radius: 1rem;
+   padding-bottom: 10px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .explore-card img {
+    height: 155px;
+    /* width: 275px; */
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 5px;
+  }
+.trend-destinations{
+    font-weight: 500;
+    margin:.6px 14px;
+  }
+  .trending-p{
+      margin:.6px 14px;
+  }
+   
+  /* last-min-weekend-cards */
+
+  .weekend-container{
+    background:linear-gradient(rgba(184, 234, 238, 0.3), rgba(4, 50, 50, 0.893)),url("assets-Mayuri/sec-3/background.avif");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    /* position: relative; */
+    border-radius: 2rem;
+    margin-top: 2rem;
+    width: 70%;
+    margin-inline: auto;
+    padding: 100px 0px 30px 40px;
+    color: white;
+}
+.goBeyond-week{
+  padding: 10px;
+    /* text-align: center; */
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.weekend-last-minute{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weekend-search-all{
+  margin-right: 100px;
+  padding: 10px 15px;
+  border-radius: 2rem;
+  border: none;
+  color:rgb(12, 12, 223);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.weekend-search-all:hover{
+  background-color: rgb(239, 239, 228);
+  transition: transform 0.3s ease-in-out;
+}
+.week-para {
+padding-left: 10px;
+font-weight: 400;
+}
+  .weekend-box2{
+    padding: 10px 0px;
+      overflow-x: auto;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+  }
+  .weekend-box{
+    position: relative;
+  }
+  .weekend-box2::-webkit-scrollbar {
+    display: none;
+  }
+  .weekend-card a{
+    text-decoration:none;
+  }
+  .weekend-cards{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+    /* background-color: transparent;
+    backdrop-filter: blur(10px); */
+  }
+  .weekend-card {
+    flex: 0 0 calc(24% - 16px);
+    margin: 0 8px;
+    /* border:1px solid rgb(157, 152, 152); */
+    border-radius: 1rem;
+    position: relative;
+    
+  }
+  .weekend-card a{
+    color: white;
+  }
+  .weekend-card img {
+    height: 150px;
+/* width: 290px;     */
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 1rem;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+  .weekend-image{
+    position: relative;
+  }
+  .carousel-caption2{
+    position: absolute;
+    top: 12px; 
+    left: 10px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .weekend-location{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .8rem;
+    padding-bottom: 10px;
+  }
+  .weekend-loc2{
+    font-size: 1.32rem;
+    font-weight: 600;
+  }
+  .weekend-stay-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .5rem;
+    padding-bottom: 10px;
+  }
+  .weekend-container span{
+    font-weight: 600;
+  }
+.weekend-ff,h5{
+  display: inline-block;
+}
+.weekend-offer-tag2{
+    width:65px;
+    height: 30px;
+    color:white;
+    background-color:#e61e43;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    display: inline-flex;
+  
+}
+.weekend-offer-tag{
+  /* width: 40%; */
+  width:180px;
+  height: 30px;
+  background-color: #7b1fa2;
+  color:white;
+  align-items: center;
+  border-radius: .5rem;
+  display: inline-flex;
+  /* gap: .2rem; */
+  justify-content: space-evenly;
+}
+.weekend-offer-tag .offer-tag{
+  padding-right: 2px;
+  color: white;
+  background: none;
+  font-size: 20px;
+  border: none;
+}
+
+
+
+
+  /* explore-unique-stays------ */
+
+  .unique-container{
+    margin-top: 2rem;
+    width: 70%;
+    margin-inline: auto;
+}
+ .uni-para{
+  padding-left: 10px;
+ }
+  .unique-box2{
+    padding: 10px 0px;
+      overflow-x: auto;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+  }
+  .unique-box{
+    position: relative;
+  }
+  .unique-box2::-webkit-scrollbar {
+    display: none;
+  }
+  .unique-card a{
+    text-decoration:none;
+  }
+  .unique-cards{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  .unique-card {
+    flex: 0 0 calc(25% - 16px);
+    margin: 0 8px;
+    /* border:1px solid rgb(157, 152, 152); */
+    border-radius: 1rem;
+    position: relative;
+    
+  }
+  .unique-card img {
+    height: 202px;
+    /* width: 280px; */
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .unique-info{
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem ;
+    color: black; 
+    font-weight:300 lighter;
+   
+  }
+  .unique-rating{
+    display: flex;
+    gap: 0.3rem;
+  }
+  .unique-container span{
+    font-weight: 400;
+  }
+  .unique-offer-tag{
+    /* width: 40%; */
+    width:180px;
+    height: 30px;
+    background-color: #7b1fa2;
+    color:white;
+    align-items: center;
+    border-radius: .5rem;
+    display: inline-flex;
+    gap: .2rem;
+    justify-content: space-evenly;
+  }
+  .unique-offer-tag2{
+    width:65px;
+    height: 30px;
+    color:white;
+    background-color:#e61e43;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    display: inline-flex;
+  }
+ .uni-member {
+    font-size:.75rem;
+    font-weight: 500;
+  }
+  .unique-loc{
+    font-weight: 500;
+  }
+  .unique-offer .uni-off-price{
+    font-weight: 500;
+  }
+.unique-offer-tag .offer-tag{
+  padding-right: 3px;
+  color: white;
+  background: none;
+  font-size: 20px;
+  border: none;
+}
+.unique-container span{
+  font-weight: 500;
+}
+
+/* media-query */
+
+@media screen and (max-width:850px) {
+  .carousel-slide {
+    flex: 0 0 calc(33% - 16px);
+  }
+  .explore-card{
+    flex: 0 0 calc(33% - 16px);
+  }
+  .goBeyond ,.goBeyond-week{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  .weekend-search-all{
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 2rem;
+    border: none;
+    color:rgb(12, 12, 223);
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .unique-card {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .weekend-card {
+    flex: 0 0 calc(50% - 16px);
+  }
+}
+@media screen and (max-width:450px) {
+  .carousel-slide {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .explore-card{
+    flex: 0 0 calc(85% - 16px);
+  }
+  .goBeyond ,.goBeyond-week{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+  }
+  .weekend-search-all{
+    display: none;
+   }
+  
+  .weekend-card {
+    flex: 0 0 calc(90% - 16px);
+  }
+  .unique-card {
+    flex: 0 0 calc(85% - 16px);
+  }
+  .week-para {
+    padding-left: 10px;
+    font-weight: 200;
+    font-size: .7rem;
+    }
+    .weekend-container{
+      padding: 50px 0px 10px 20px;
+   
+  }
+}

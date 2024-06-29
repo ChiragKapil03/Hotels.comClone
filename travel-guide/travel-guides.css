@@ -1,0 +1,567 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system, -apple-system, BlinkMacSystemFont, \.SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+}
+.Go-Guides {
+    background-image: url(assetsMayuri-guide/goguidewallpaper.jpg);
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+   display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #fff;
+text-shadow: 0 2px 1px rgba(0, 0, 0, .3), 0 0 .5rem rgba(0, 0, 0, .5);
+
+}
+.Go-Guides-Content{
+    position: relative;
+    z-index: 1;
+}
+.Go-Guides::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    opacity: 0.5; 
+}
+.Go-Guides-Content h1{
+    font-size: 5.5rem;
+    line-height: 5.75rem;
+   
+}
+.Go-Guides-Content h2{
+    font-weight: 700; 
+
+}
+.Go-Guides-info{
+    width: 70%;
+    margin-inline: auto;
+    padding: 20px 0px;
+}
+
+.Go-Guides-info p{
+    
+    font-size: 1rem;
+    letter-spacing: .4px;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.hr-line{
+    background-color: rgb(218, 211, 211);
+    height: 2px;
+    width: 70%;
+
+    margin-inline: auto;
+}
+.Top{
+    width: 70%;
+    margin-inline: auto;
+    padding: 20px 0px;
+   
+}
+.Top>h1{
+    font-size: 32px;
+    line-height: 2.125rem;
+    font-weight: 700;
+}
+.Top>p{
+    font-size: 20px;
+    margin: 5px 0px;
+}
+.destination a{
+    text-decoration: none;
+}
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: repeat(13, 65px);
+    padding: 15px;
+    /* background-color: rebeccapurple; */
+    gap: 20px; 
+     margin: 30px;
+    margin-inline:auto ;
+}
+.destination{
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   transition: transform 0.5s ease;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.destination-1{
+    grid-area: 1 / 1/ 5 / 7;
+    background-image: url(assetsMayuri-guide/london.png);
+    
+}
+.destination-2{
+    grid-area: 1 / 7/ 5 / -1;
+    background-image: url(assetsMayuri-guide/newYork.jpg);
+}
+.destination-3{
+    grid-area: 5 / 1/ 8 / 5;
+    background-image: url(assetsMayuri-guide/paris.jpg);
+}
+.destination-4{
+    grid-area: 5 / 5/ 8 / 9;
+    background-image: url(assetsMayuri-guide/ansterdam.jpg);
+}
+
+.destination-5{
+    grid-area: 5 / 9/ 8 / -1;
+    background-image: url(assetsMayuri-guide/manchester.jpg);
+}
+.destination-6{
+    grid-area: 8 / 1/ 11 / 5;
+    background-image: url(assetsMayuri-guide/dublin.jpg);
+}
+.destination-7{
+    grid-area: 8 / 5/11 / 9;
+    background-image: url(assetsMayuri-guide/edinburgh.jpg);
+}
+
+.destination-8{
+    grid-area: 8 / 9/ 11 / -1;
+    background-image: url(assetsMayuri-guide/dubai.jpg);
+}
+.destination-9{
+    grid-area: 11 / 1/ -1 / 5;
+    background-image: url(assetsMayuri-guide/abuudhabi.jpg);
+}
+.destination-10{
+    grid-area: 11 / 5/ -1 / 9;
+    background-image: url(assetsMayuri-guide/barmingham.jpg);
+}
+
+.destination-11{
+    grid-area: 11 / 9/ -1 / -1;
+    background-image: url(assetsMayuri-guide/yosemite.jpg);
+}
+
+.overlay  {
+    text-align: center;
+
+}
+.overlay h3 , .overlay p , .overlay a{
+    color: #fff;
+}
+.overlay h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.overlay p{
+
+   font-weight: 500;
+   /* margin-top: 30px; */
+   margin-bottom: 20px;
+   text-align: justify; 
+}
+.Guides-btn{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.Read-btn{
+    background-color:#1668E3 ;
+    padding: 10px 15px;
+   text-decoration: none;
+  font-weight: 700;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top:70%;
+    right: 0;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.03);  */
+    outline: none;
+    padding: 20px 20px 10px 20px;
+    transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+.destination:hover .overlay {
+   top: 0; 
+   background-color: rgba(0, 0, 0, 0.6);
+   padding-top: 10px;
+}
+.Trending-container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(4 ,250px);
+    /* background-color: aqua; */
+    gap: 20px;
+    padding: 10px;
+    margin: 30px 0px;
+ 
+}
+.Trending{
+    /* background-color: #1668E3; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Trending a{
+    text-decoration: none;
+}
+.Trending-1{
+   grid-area: 1 / 1 / 3 /3 ;
+   background-image: url(assetsMayuri-guide/canary.jpg);
+    
+}
+.Trending-2{
+    font-size: 20px;
+    background-image: url(assetsMayuri-guide/village.jpg);    
+ }
+ .Trending-3{
+    background-image: url(assetsMayuri-guide/budhapest.jpg);    
+ }
+ .Trending-4{
+    font-size: 20px;
+    font-weight: 100;
+    background-image: url(assetsMayuri-guide/bankok.jpg);    
+ }
+
+ .Trending-5{
+    background-image: url(assetsMayuri-guide/korean.jpg);    
+ }
+ .Trending-6{
+    background-image: url(assetsMayuri-guide/hotel.jpg);    
+ }
+
+ .Trending-7{
+    background-image: url(assetsMayuri-guide/uk.jpg);    
+ }
+ .Trending-8{
+    background-image: url(assetsMayuri-guide/malaga.jpg);    
+ }
+ .Trending-9{
+    background-image: url(assetsMayuri-guide/coffee.jpg);
+ }
+.Trending-overlay h3 {
+font-size: 25px;
+font-weight: 800;
+margin-bottom: 10px;
+text-align: left
+}
+.Trending-overlay p {
+   
+   font-weight: 500;
+    margin-bottom: 20px;
+    }
+    
+.Trending-overlay {
+       color: white;
+        height: 100%; 
+        text-align: left;
+        position: absolute;
+        padding: 5px 20px;
+       top:83%;
+        right: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1); 
+        transition: top .3s ease ,background-color .3s ease;
+    }
+
+    .Trending-overlay .Read-btn {
+        display: inline-block; 
+        margin-top: 10px; 
+    }
+    .Trending:hover .Trending-overlay{
+         display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        top: 0%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        padding-top: 20px;
+    }
+
+    .Trending-overlay>h3{
+        font-size: 20px;
+    }
+    .Trending-1 .Trending-overlay h3{
+        font-size: 25px;
+        padding-top: 30px;
+    }
+.third-line{
+    background-color: rgba(0, 0, 0, 0.7); 
+    height: 3px;
+    margin-bottom: 10px;
+}
+.fourth-line{
+    width: 100%;
+}
+.keep-explore{
+    width: 70%;
+    margin-inline: auto;
+    padding: 20px 0px;
+}
+.dot{
+    color: grey;
+    font-size: 40px;
+    display: inline;
+    padding-top: 5px;
+    text-align: center;
+    /* display: flex;
+    justify-content: ;
+    align-items: center; */
+}
+.links>a{
+ color: rgb(32, 32, 195);
+ font-weight: 500;
+}
+.form-where{
+    width: 70%;
+    margin-inline: auto;
+}
+
+/* --media-query--- */
+@media screen and (max-width:850px) {
+    .overlay {
+        position: absolute;
+        top:78%;
+        right: 0;
+        height: 100%;
+        /* background-color: rgba(0, 0, 0, 0.03);  */
+        outline: none;
+        padding: 20px 20px 10px 20px;
+        transition: top 0.3s ease, background-color 0.3s ease;
+    }
+    .overlay h3{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .overlay p{
+         font-size: .7rem;
+        /* font-weight: 500; */
+        /* margin-top: 30px; */
+        margin-bottom: 20px;
+        text-align: justify; 
+     }
+    .Trending-overlay{
+        font-size: 10px;
+    }
+    .Trending-overlay>h3{
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .Trending-1 .Trending-overlay h3{
+        font-size: 18px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .Go-Guides{
+        height: 350px;
+    }
+    .Go-Guides::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 350px;
+        background-color: black;
+        opacity: 0.5; 
+    }
+    .Go-Guides-Content h1{
+        font-size: 3.5rem;
+        line-height: 4rem;
+       
+    }
+    .Top{
+        width: 100%;
+        
+    }
+    .Top>h1,p{
+        text-align: center;
+    }
+    .destination-container {
+        display: grid;
+        grid-template-columns: repeat(6, 400); 
+        grid-template-rows: repeat(11, 230px);
+        padding: 15px;
+        /* background-color: rebeccapurple; */
+        gap: 10px; 
+         margin: 30px;
+        margin-inline:auto ;
+    }
+    .destination-1{
+        grid-area: 1 / 1/ 2/ -1;
+        background-image: url(assetsMayuri-guide/london.png);
+        
+    }
+    .destination-2{
+        grid-area: 2 / 1/ 3 / -1;
+        background-image: url(assetsMayuri-guide/newYork.jpg);
+    }
+    .destination-3{
+        grid-area: 3/ 1/ 4 / -1;
+        background-image: url(assetsMayuri-guide/paris.jpg);
+    }
+    .destination-4{
+        grid-area: 4/ 1/ 5 / -1;
+        background-image: url(assetsMayuri-guide/ansterdam.jpg);
+    }
+    
+    .destination-5{
+        grid-area: 5 / 1/ 6 / -1;
+        background-image: url(assetsMayuri-guide/manchester.jpg);
+    }
+    .destination-6{
+        grid-area: 6 / 1/ 7 / -1;
+        background-image: url(assetsMayuri-guide/dublin.jpg);
+    }
+    .destination-7{
+        grid-area: 7 / 1/8 / -1;
+        background-image: url(assetsMayuri-guide/edinburgh.jpg);
+    }
+    
+    .destination-8{
+        grid-area: 8 / 1/ 9 / -1;
+        background-image: url(assetsMayuri-guide/dubai.jpg);
+    }
+    .destination-9{
+        grid-area: 9 / 1/ 10 / -1;
+        background-image: url(assetsMayuri-guide/abuudhabi.jpg);
+    }
+    .destination-10{
+        grid-area: 10 / 1/ 11 / -1;
+        background-image: url(assetsMayuri-guide/barmingham.jpg);
+    }
+    
+    .destination-11{
+        grid-area: 11 / 1/ -1 / -1;
+        background-image: url(assetsMayuri-guide/yosemite.jpg);
+    }
+    .overlay p{
+        font-size: .5rem;
+    }
+    .Trending-container{
+        display: grid;
+        grid-template-columns: repeat(1 ,400px );
+        grid-template-rows: repeat(9 ,330px);
+        /* background-color: aqua; */
+        gap: 10px;
+        padding: 10px;
+        margin: 30px 0px;
+     
+    }
+    
+    .Trending-1{
+       grid-area: 1 / 1 / 1 /-1 ;
+       background-image: url(assetsMayuri-guide/canary.jpg);
+        
+    }
+    .Trending-2{
+        font-size: 20px;
+        background-image: url(assetsMayuri-guide/village.jpg);    
+     }
+     .Trending-3{
+        background-image: url(assetsMayuri-guide/budhapest.jpg);    
+     }
+     .Trending-4{
+        font-size: 20px;
+        font-weight: 100;
+        background-image: url(assetsMayuri-guide/bankok.jpg);    
+     }
+    
+     .Trending-5{
+        background-image: url(assetsMayuri-guide/korean.jpg);    
+     }
+     .Trending-6{
+        background-image: url(assetsMayuri-guide/hotel.jpg);    
+     }
+    
+     .Trending-7{
+        background-image: url(assetsMayuri-guide/uk.jpg);    
+     }
+     .Trending-8{
+        background-image: url(assetsMayuri-guide/malaga.jpg);    
+     }
+     .Trending-9{
+        background-image: url(assetsMayuri-guide/coffee.jpg);
+     }
+    .Trending-overlay h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: left
+    }
+    .Trending-overlay p {
+       
+       font-weight: 500;
+        margin-bottom: 20px;
+        }
+        
+    .Trending-overlay {
+           color: white;
+            height: 100%; 
+            text-align: left;
+            position: absolute;
+            padding: 5px 20px;
+           top:87%;
+            right: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1); 
+            transition: top .3s ease ,background-color .3s ease;
+        }
+    
+        .Trending-overlay .Read-btn {
+            display: inline-block; 
+            margin-top: 10px; 
+        }
+        .Trending:hover .Trending-overlay{
+             display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            top: 0%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding-top: 20px;
+        }
+    
+        .Trending-overlay>h3{
+            font-size: 20px;
+        }
+        .Trending-1 .Trending-overlay h3{
+            font-size: 20px;
+            padding-top: 0px;
+        }
+        .form-where{
+            width: 90%;
+            margin-inline: auto;
+        }
+        .keep-explore{
+            width: 90%;
+            margin-inline: auto;
+        }
+        .hr-line{
+            width: 90%;
+            margin-inline: auto;
+        }
+        
+
+}
