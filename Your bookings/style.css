@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 270px;
+}
+
+h1{
+    font-size: 1.90rem;
+    font-weight: 450;
+    line-height: 2rem;
+    margin-left: -270px;
+    margin-top: 0px;
+}
+img{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+a{
+    font-size: 15px;
+    font-weight: 650;
+    color: white;
+    border-radius: 99px;
+    background-color: #1668e3;
+    text-decoration: none;
+    padding: 10px 150px;
+    cursor: pointer;
+    line-height: 27px;
+}
+a:hover{
+   background-color: #0a418e;
+}
+div>.account{
+    margin-top: 30px;
+    padding-left: 10px;
+    border: 1px solid rgb(193, 186, 186);
+    border-radius: 12px;
+}
+
+div>.account>span,p{
+   padding: 0 0;
+   margin: 5px auto;
+}
+
+.withthehotel{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 30px;
+    height: 19rem;
+    border: 1px solid rgb(193, 186, 186);
+    border-radius: 15px;
+}
+
+.withthehotel img{
+    margin-top: 0px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.withthehotel div h2{
+    font-size: 35px;
+    font-weight: 450;
+    color: #191e3b;
+}
+.withthehotel div li{
+    word-spacing: 2px;
+    padding: 3px;
+}
+
