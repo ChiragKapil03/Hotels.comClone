@@ -10,7 +10,7 @@
   }
   
   .card-container {
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
     /* background-color: brown; */
   }
@@ -108,7 +108,7 @@
 
 .Explore-container{
     margin-top: 2rem;
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
 }
 
@@ -170,7 +170,7 @@
     /* position: relative; */
     border-radius: 2rem;
     margin-top: 2rem;
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
     padding: 100px 0px 30px 40px;
     color: white;
@@ -328,7 +328,7 @@ font-weight: 400;
 
   .unique-container{
     margin-top: 2rem;
-    width: 70%;
+    width: 80%;
     margin-inline: auto;
 }
  .uni-para{

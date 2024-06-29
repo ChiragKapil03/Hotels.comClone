@@ -7,6 +7,87 @@
     <link rel="stylesheet" href="output.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hotels.com_Icon_2022.svg/1924px-Hotels.com_Icon_2022.svg.png">
+    <script
+      src="https://kit.fontawesome.com/4f92722c24.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cardstyle.css" />
+    <style>
+        .hotel-details .img_Container img {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        .container .hotels_Content .getAppBtn {
+            display: none;
+        }
+
+        @media screen and (max-width:780px) {
+
+            .container .hotels_Content .qrCode_Img,
+            .container .hotels_Content p {
+                display: none;
+            }
+
+            .container .hotels_Content .getAppBtn {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+        }
+
+        @media screen and (max-width:600px) {
+            .container .hotel-details {
+                flex-direction: column;
+            }
+
+            .container .hotel-details .img_Container,
+            .container .hotel-details .hotels_Content {
+                width: 100%;
+            }
+
+            .hotel-details .img_Container img {
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        /* Footer  */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        .global-navigation-footer{
+            /* border:2px dashed black; */
+            width: 100%;
+            inline-size: 100%;
+            max-inline-size: 120rem;
+            margin: auto;
+            margin-top: 60px;
+        }
+        .items-contents{
+            display: flex;
+            gap: 5rem;
+        }
+        .contents-informations{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .contents-informations>h3{
+            font-family: system, -apple-system, BlinkMacSystemFont, SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+            font-size:0.8rem;
+        }
+        .contents-informations>a{
+            font-family: system, -apple-system, BlinkMacSystemFont, SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 0.85rem;
+            text-decoration: none;
+            color:rgb(10, 68, 168);
+        }
+        .contents-informations>a:hover{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header class="w-full shadow">
@@ -22,11 +103,14 @@
             </div>
             <!-- left side  -->
              <div class="flex items-center gap-6 text-red-600">
-                <button class=" text-black text-sm font-semibold flex overflow-hidden items-center gap-2 p-2 border-2 border-inherit rounded-3xl h-9 font-Display ">
-                    <span class="material-symbols-outlined text-blue-700 ">download_2</span>
-                    <!-- <span class="material-symbols-outlined text-blue-700 ">download</span> -->
-                        <span class="hidden sm:block">Get the app</span>
-                </button>
+                <a href="Links-Chirag/download.html">
+                    <button class=" text-black text-sm font-semibold flex overflow-hidden items-center gap-2 p-2 border-2 border-inherit rounded-3xl h-9 font-Display ">
+                        <span class="material-symbols-outlined text-blue-700 ">download_2</span>
+                        <!-- <span class="material-symbols-outlined text-blue-700 ">download</span> -->
+                            <span class="hidden sm:block">Get the app</span>
+                    </button>
+                </a>
+                
                 <ul class="hidden sm:flex gap-6 items-center font-Display text-sm font-semibold align-middle">
                     <li class="hidden lg:flex content-center ">
                         <a class="flex" href="Links-Chirag/English-Globe.html">
@@ -61,22 +145,22 @@
         <section class="search-section">      
             <form class="flex flex-col sm:flex-row sm:items-center w-full gap-2">
                 <div class="mt-2 sm:w-1/3">
-                    <label for="destination">
+                    <!-- <label for="destination">
                         <span class="material-symbols-outlined">location_on</span>
-                    </label>
-                    <input  class=" w-full h-12 border border-black rounded-xl p-2 " type="text" id="destination" placeholder= "Where to?">
+                    </label> -->
+                    <input  class=" w-full h-12 border border-black rounded-xl p-2 " type="text" id="destination" placeholder= " 📌 Where to?">
                 </div>
                 <div class="mt-2 sm:w-1/3">
-                    <label for="dates">
+                    <!-- <label for="dates">
                         <span class="material-symbols-outlined">calendar_month</span>
-                    </label>
-                    <input class=" w-full h-12 border border-black rounded-xl p-2 " type="date" id="dates" placeholder="9 Jul - 10 Jul">
+                    </label> -->
+                    <input class=" w-full h-12 border border-black rounded-xl p-2 " type="date" id="dates" placeholder=" 📆 9 Jul - 10 Jul">
                 </div>
                 <div class="mt-2 sm:w-1/3">
-                    <label for="travellers">
+                    <!-- <label for="travellers">
                         <span class="material-symbols-outlined">person</span>
-                    </label>
-                    <input class=" w-full h-12 border border-black rounded-xl p-2" type="text" id="travellers" placeholder="2 Travellers, 1 room">
+                    </label> -->
+                    <input class=" w-full h-12 border border-black rounded-xl p-2" type="text" id="travellers" placeholder=" 👥 2 Travellers, 1 room">
                 </div>
                 <button class=" w-full h-14 border rounded-3xl p-2 mt-2 self-end bg-blue-600 font-semibold text-white sm:w-28 sm:mt-0 sm:ml-2" type="submit">Search</button>
             </form>
@@ -88,7 +172,7 @@
     <div class="xl:max-w-screen-xl mx-auto px-6">
         <h1 class="font-semibold text-lg sm:text-3xl font-Display mb-4">Your recent searches</h1>
         <div class="flex  gap-3  overflow-x-scroll no-scrollbar">
-            <a class=" " href="">
+            <a class="" href="AllCards/inclusiveRoomCards/hotelRoom.html">
                 <div class="flex items-center p-2 gap-2 border border-gray-200 bg-recent-search rounded-lg w-[450px] sm:w-[225px] md:w-[400px] lg:w-[280px]">
                     <span class="material-symbols-outlined">location_city</span>
                     <div class="flex flex-col text-justify">  
@@ -98,7 +182,7 @@
                     </div>  
                 </div>
             </a>
-            <a  class=" " href="">
+            <a  class="" href="AllCards/inclusiveRoomCards/room2.html">
                 <div class="flex items-center p-2 gap-2 border border-gray-200 bg-recent-search rounded-lg w-[450px] sm:w-[225px] md:w-[400px] lg:w-[280px]">
                     <span class="material-symbols-outlined">location_city</span>
                     <div class="flex flex-col text-justify">  
@@ -108,7 +192,7 @@
                     </div>  
                 </div>
             </a>
-            <a  class="" href="">
+            <a  class="" href="AllCards/inclusiveRoomCards/room3.html">
                 <div class="flex items-center p-2 gap-2 border border-gray-200 bg-recent-search rounded-lg w-[450px] sm:w-[225px] md:w-[400px] lg:w-[280px]">
                     <span class="material-symbols-outlined">location_city</span>
                     <div class="flex flex-col text-justify">  
@@ -118,7 +202,7 @@
                     </div>  
                 </div>
             </a>
-            <a  class="" href="">
+            <a  class="" href="AllCards/inclusiveRoomCards/room1.html">
                 <div class="flex items-center p-2 gap-2 border border-gray-200 bg-recent-search rounded-lg w-[450px] sm:w-[225px] md:w-[400px] lg:w-[280px]">
                     <span class="material-symbols-outlined">location_city</span>
                     <div class="flex flex-col text-justify">  
@@ -128,7 +212,7 @@
                     </div>  
                 </div>
             </a>
-            <a  class="" href="">
+            <a  class="" href="AllCards/inclusiveRoomCards/room3.html">
                 <div class="flex items-center p-2 gap-2 border border-gray-200 bg-recent-search rounded-lg w-[450px] sm:w-[225px] md:w-[400px] lg:w-[250px]">
                     <span class="material-symbols-outlined">location_city</span>
                     <div class="flex flex-col text-justify">  
@@ -179,8 +263,909 @@
                 
             </div>
         </div>     
-    </div>
-    
+    </div> <br><br>
 
+    <!-- Discover new Fav -->
+
+    <section class="card-container xl:max-w-screen-xl mx-auto ">
+        <h2 class="goBeyond">Go beyond your typical stay</h2>
+        
+        <div class="carousel-box">
+          <button class="carousel-button prev-carousel">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel">
+            <ul class="carousel-tracker">
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room1.html"
+                  ><img
+                    src="assets-Mayuri/sect-1/pool.jpeg"
+                    alt="pool-img"
+                  /><span class="carousel-caption">pool</span></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room2.html"
+                  ><img src="assets-Mayuri/sect-1/Apartment.avif" alt="" /><span
+                    class="carousel-caption"
+                    >Apartments</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room3.html"
+                  ><img src="assets-Mayuri/sect-1/resort.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >Resort</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room1.html"
+                  ><img src="assets-Mayuri/sect-1/inclusive.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >All inclusive</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room2.html"
+                  ><img src="assets-Mayuri/sect-1/houseboat.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >Houseboat</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room3.html"
+                  ><img src="assets-Mayuri/sect-1/spa.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >spa</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room1.html"
+                  ><img src="assets-Mayuri/sect-1/cottage.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >villa</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room2.html"
+                  ><img src="assets-Mayuri/sect-1/sea.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >Sea View</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room3.html"
+                  ><img src="assets-Mayuri/sect-1/pet.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >Pet Friendly</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room2.html"
+                  ><img src="assets-Mayuri/sect-1/hot-tub.jpg" alt="" /><span
+                    class="carousel-caption"
+                    >hot tub</span
+                  ></a
+                >
+              </li>
+              <li class="carousel-slide">
+                <a href="AllCards/inclusiveRoomCards/room1.html"
+                  ><img src="assets-Mayuri/sect-1/family (1).jpg" alt="" /><span
+                    class="carousel-caption"
+                    >Family-friendly</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-button next-carousel">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+  
+      <!-- -----Explore-trending-stays-cards------ -->
+  
+      <section class="Explore-container xl:max-w-screen-xl mx-auto">
+        <h2 class="goBeyond">Explore stays in trending destinations</h2>
+        <div class="explore-box">
+          <button class="carousel-button  prev-explore">
+            <i class="fa-solid fa-chevron-left fa-xs" style="color: #184e77"></i>
+          </button>
+          <div class="explore-box2">
+            <div class="explore-cards">
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <img
+                    src="assets-Mayuri/sec-2/karrachhiii.avif"
+                    alt="karachi-img"
+                  />
+                  <h3 class="trend-destinations">Karachi</h3>
+                  <p class="trending-p">Pakistan</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <img src="assets-Mayuri/sec-2/colombo.jpg" alt="karachi-img" />
+                  <h3 class="trend-destinations">Colombo</h3>
+                  <p class="trending-p">Sri Lanka</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <img src="assets-Mayuri/sec-2/makkah.jpg" alt="karachi-img" />
+                  <h3 class="trend-destinations">Makkah</h3>
+                  <p class="trending-p">Saudi Arabia</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <img src="assets-Mayuri/sec-2/dallas.jpg" alt="karachi-img" />
+                  <h3 class="trend-destinations">Dallas</h3>
+                  <p class="trending-p">United State of America</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <img
+                    src="assets-Mayuri/sec-2/ubud.jpg"
+                    alt="karachi-img"
+                  />
+                  <h3 class="trend-destinations">ubud</h3>
+                  <p class="trending-p">Indonesia</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <img
+                    src="assets-Mayuri/sec-2/baku.jpg"
+                    alt="karachi-img"
+                  />
+                  <h3 class="trend-destinations">Baku</h3>
+                  <p class="trending-p">Azerbaijan</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <img
+                    src="assets-Mayuri/sec-2/gurugram.jpg"
+                    alt="karachi-img"
+                  />
+                  <h3 class="trend-destinations">Gurugram</h3>
+                  <p class="trending-p">India</p>
+                </a>
+              </div>
+              <div class="explore-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <img
+                    src="assets-Mayuri/sec-2/mykonos.jpg"
+                    alt="karachi-img"
+                  />
+                  <h3 class="trend-destinations">Mykonos</h3>
+                  <p class="trending-p">Greece</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-button next-explore">
+            <i class="fa-solid fa-chevron-right fa-xs" style="color: #184e77"></i>
+          </button>
+        </div>
+      </section>
+  
+      <!-- -----weekend-deals---- -->
+  
+      <section class="weekend-container xl:max-w-screen-xl mx-auto">
+        <div class="weekend-last-minute">
+          <h2 class="goBeyond-week">Last-minute weekend deals</h2>
+          <button class="weekend-search-all">Search all deals</button>
+        </div>
+        <p class="week-para">Showing deals for : <span>28 Jun - 30 Jun</span></p>
+        <div class="weekend-box">
+          <button class="carousel-button prev-weekend">
+            <i class="fa-solid fa-chevron-left fa-xs" style="color: #184e77"></i>
+          </button>
+          <div class="weekend-box2">
+            <div class="weekend-cards">
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/first.avif" alt="" />
+                    <span class="carousel-caption2">VIP Access</span>
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">Mumbai</p>
+                      <h3 class="weekend-loc2">
+                        Aurika ,Mumbai Sticky - Luxury by Lemon Tree Hotels
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.2/10</span> wonderful(43 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹9,000</h3>
+                        <h5><strike>₹17,999</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹47,200 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag2">
+                          <p class="week-member">50% off</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/manor.jpg" alt="" />
+                    
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">New Delhi</p>
+                      <h3 class="weekend-loc2">
+                        The Manor-New Delhi
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.0/10</span> wonderful(105 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹7,038</h3>
+                         <h5><strike>₹8,797</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹15,764 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag2">
+                          <p class="week-member">20% off</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/fullerton.jpg" alt="" />
+                   
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">Singapore</p>
+                      <h3 class="weekend-loc2">
+                        The Fullerton Hotel Singapore
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.4/10</span> Exceptional(1003 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹39,670</h3>
+                         <h5><strike>₹15,893</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹95,129 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag">
+                          <button class="offer-tag">
+                            <i class="fa-solid fa-tag"></i>
+                          </button>
+                          <p class="uni-member">Member Price available</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/vida.jpg" alt="" />
+                    <span class="carousel-caption2">VIP Access</span>
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">Dubai</p>
+                      <h3 class="weekend-loc2">
+                        Vida Dubai Marina & Yacht Club
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.6/10</span> Exceptional(140 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹8,346</h3>
+                         <h5><strike>₹11,923</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹21,131 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag2">
+                          <p class="week-member">30% off</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/adarsh.jpg" alt="" />
+                   
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">Bengalura</p>
+                      <h3 class="weekend-loc2">
+                        Adarsh Hamilton
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.0/10</span> wonderful(147 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹5,487</h3>
+                         <h5><strike>₹7,538</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹12,292 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag2">
+                          <p class="week-member">27% off</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/apex.jpg" alt="" />
+                    <span class="carousel-caption2">VIP Access</span>
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">London</p>
+                      <h3 class="weekend-loc2">
+                        Apex Temple Court Hotel
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>9.4/10</span> Exceptional(1409 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">₹21,378</h3>
+                         <h5><strike>₹26,723</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹51,307 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag">
+                          <button class="offer-tag">
+                            <i class="fa-solid fa-tag"></i>
+                          </button>
+                          <p class="uni-member">Member Price available</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+              <div class="weekend-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="weekend-image">
+                    <img src="assets-Mayuri/sec-3/lemon.jpg" alt="" />
+                   
+                  </div>
+                  <div class="weekend-info">
+                    <div class="weekend-location">
+                      <p class="weekend-loc1">Hyderabad</p>
+                      <h3 class="weekend-loc2">
+                        Lemon Tree Premier ,HITEC City,Hyderabad
+                      </h3>
+                      <p class="weekend-loc1">
+                        <span>7.8/10</span> Good(130 reviews)
+                      </p>
+                    </div>
+                    <div class="weekend-stay-price">
+                      <div class="weekend-price">
+                        <h3 class="weekend-ff">6,585</h3>
+                         <h5><strike>₹9,242</strike></h5>
+                      </div>
+                        <div class="weekend-p-details">
+                          <p>per night</p>
+                          <p>₹16,304 total</p>
+                          <p>includes taxes & fees</p>
+                        </div>
+                        <div class="weekend-offer-tag">
+                          <button class="offer-tag">
+                            <i class="fa-solid fa-tag"></i>
+                          </button>
+                          <p class="uni-member">Member Price available</p>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </a>
+              </div>
+             </div>
+             
+          </div>
+          <button class="carousel-button next-weekend">
+            <i class="fa-solid fa-chevron-right fa-xs" style="color: #184e77"></i>
+          </button>
+        </div>
+      </section>
+  
+      <!-- ----explore-unique-stays-cards------ -->
+  
+      <section class="unique-container xl:max-w-screen-xl mx-auto">
+        <h2 class="goBeyond">Explore these unique stays</h2>
+        <p class="uni-para">Showing deals for : <span>19 Jul - 21 Jul</span></p>
+        <div class="unique-box">
+          <button class="carousel-button prev-unique">
+            <i class="fa-solid fa-chevron-left fa-xs" style="color: #184e77"></i>
+          </button>
+          <div class="unique-box2">
+            <div class="unique-cards">
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/raipur.avif" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating">
+                      <span>10.0/10</span>
+                      <p>Exceptional(3reviews)</p>
+                    </div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">RAAS Chhatrasagar</h4>
+                      <p class="uni-ted-p">Raipur</p>
+                    </div>
+                    <div class="unique-offer">
+                      <h3 class="uni-off-price">₹20,000</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹47,200 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      <button class="offer-tag">
+                        <i class="fa-solid fa-tag"></i>
+                      </button>
+                      <p class="uni-member">Member Price available</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+  
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/talabgaon.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating">
+                      <span>8.0.0/10</span>
+                      <p>Very good(1 reviews)</p>
+                    </div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Talabgaon Castle</h4>
+                      <p class="uni-ted-p">Lalsot</p>
+                    </div>
+                    <div class="unique-offer">
+                      <h3 class="uni-off-price">₹7,040</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹15,769 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      <button class="offer-tag">
+                        <i class="fa-solid fa-tag"></i>
+                      </button>
+                      <p class="uni-member">Member Price available</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/villamahabaleshwar.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>8.0/10</span><p>Very good(1 review)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Arabian Villa's</h4>
+                      <p class="uni-ted-p">Mahabaleshwar</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹3,000</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹6,720 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/paradiseboat.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>10.0/10</span><p>Exceptional(1 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Beachparadise Daycruise houseboat</h4>
+                      <p class="uni-ted-p">Alappuzha</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹6,989</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹16,493 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag2">
+                    
+                       <p class="uni-member">11% off</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/raipur.avif" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>8.4/10</span><p>Very good(134 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">The Lalit Laxmi Vilas Palace</h4>
+                      <p class="uni-ted-p">Udaipur</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹10,350</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹24,426 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag2"> 
+                       <p class="uni-member">10% off</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/kadalundi.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>10.0/10</span><p>Exceptional(3reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">La Reve The Beach Villa</h4>
+                      <p class="uni-ted-p">Kadalundi</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹7,950</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹18,762 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room3.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/villaolives.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>8.0/10</span><p>Very good(1 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Villa Olives Vanashraya</h4>
+                      <p class="uni-ted-p">Jaipur</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹17,956</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹42,375 total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/heritagejhunjhunu.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>8.6/10</span><p>Excellent(9 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Alsisar Mahal-A Heritage Hotel</h4>
+                      <p class="uni-ted-p">Jhunjhunu</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹7,040</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹15,771total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room1.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/mundota.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>10.0/10</span><p>Exceptional(1 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Mundota Fort and Palace</h4>
+                      <p class="uni-ted-p">Jaipur</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹16,000</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹37,760total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div class="unique-card">
+                <a href="AllCards/inclusiveRoomCards/room2.html">
+                  <div class="unique-img">
+                    <img src="assets-Mayuri/sec-4/sterline.jpg" alt="" />
+                  </div>
+                  <div class="unique-info">
+                    <div class="unique-rating"><span>10.0/10</span><p>Exceptional(1 reviews)</p></div>
+                    <div class="unique-location">
+                      <h4 class="unique-loc">Sterling House boat Lake Palace</h4>
+                      <p class="uni-ted-p">Alappuzha</p>
+                    </div>
+                    <div class="unique-offer">
+                    <h3 class="uni-off-price">₹26,775</h3>
+                    </div>
+                    <div class="unique-perstay">
+                      <p>per night</p>
+                      <p>₹63,189total</p>
+                      <p>includes taxes & fees</p>
+                    </div>
+                    <div class="unique-offer-tag">
+                      
+                      <button class="offer-tag"><i class="fa-solid fa-tag"></i></button>
+                       <p class="uni-member">Member Price available</p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-button next-unique">
+            <i class="fa-solid fa-chevron-right fa-xs" style="color: #184e77"></i>
+          </button>
+        </div>
+      </section>
+    <br><br>
+
+</div><br>
+
+<!-- Card with Qr  -->
+<div class=" xl:max-w-screen-xl mx-auto p-6 ">
+    <div  class=" xl:max-w-screen-xl mx-auto flex border border-gray-300 rounded-xl">
+        <div class="img_Container w-1/3">
+            <img src="assets\poolImg.jpg" alt="Pool" class="w-full h-32 object-cover">
+        </div>
+        <div class="hotels_Content w-2/3 flex justify-between">
+            <div class="rounded-lg p-5 ">
+                <h2 class="text-3xl text-gray-800 mb-4 font-medium">
+                    With the Hotels.com app, you can:
+                </h2>
+                <ul class="list-disc pl-6 text-gray-600">
+                    <li class="text-xs leading-5">
+                        Save on select hotels
+                    </li>
+                    <li class="text-xs leading-5">
+                        Earn one reward night* for every 10 nights you stay
+                    </li>
+                    <li class="text-xs leading-5">
+                        Search, book, and save on the go
+                    </li>
+                </ul>
+                <br>
+                <p class=" font-bold text-sm text-gray-600 my-2">
+                    Scan the QR code with your device camera and download our app
+                </p>
+
+                <div>
+                    <button class=" getAppBtn bg-blue-500 hover:bg-blue-600 w-full p-2 rounded-3xl">Get the
+                        app</button>
+                    <div class="text-center">
+                        <a href="/" class="text-sm text-blue-600 underline hover:text-blue-700">
+                            *See Hotels.com Rewards terms & conditions
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="qrCode_Img mt-6 mr-6 flex items-start justify-end h-32">
+                <img src="assets\QR-code.webp" alt="QR Code" class="w-full mx-auto h-24">
+            </div>
+        </div>
+
+    </div><br>
+
+    <!-- Footer section  -->
+
+    <footer class="xl:max-w-screen-xl mx-auto">
+        <div class="global-navigation-footer">
+            <div class="footer-header">
+                <a href="https://www.expediagroup.com/home/default.aspx" target="_blank"><img
+                        src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+                        alt=""></a>
+            </div><br>
+                <div class="footer-contents">
+                    <div class="items-contents">
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">Top destinations</h3><br>
+                            <a href="dubai.html">Hotels in Dubai</a>
+                            <a href="dubai.html">Hotels in Paris</a>
+                            <a href="dubai.html">Hotels in London</a>
+                            <a href="dubai.html">Hotels in Mumbai</a>
+                            <a href="dubai.html">Hotels in New York</a>
+                            <a href="dubai.html">Hotels in Bangkok</a>
+                            <a href="dubai.html">Hotels in New Delhi</a>
+                            <a href="dubai.html">Hotels in Singapore</a>
+                            <a href="dubai.html">Hotels in Hyderabad</a>
+                            <a href="dubai.html">Hotels in Amsterdam</a>
+                            <a href="dubai.html">Hotels in Kolkata</a>
+                            <a href="dubai.html">Hotels in Jaipur</a>
+                            <a href="dubai.html">Hotels in Istanbul</a>
+                            <a href="dubai.html">Hotels in Pune</a>
+                            <a href="dubai.html">Hotels in Chennai</a>
+                            <a href="dubai.html">Hotels in Hong Kong</a>
+                            <a href="dubai.html">Hotels in Rome</a>
+                            <a href="dubai.html">Hotels in Las Vegas</a>
+                            <a href="dubai.html">Hotels in Krabi</a>
+                            <a href="dubai.html">Hotels in Kuala Lumpur</a>
+                            <a href="dubai.html">Hotels in Barcelona</a>
+                            <a href="dubai.html">Hotels in Agra</a>
+                            <a href="dubai.html">Hotels in Tokyo</a>
+    
+                        </div>
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">Top countries & regions</h3><br>
+                            <a href="../dubai.html">Hotels in Maldives</a>
+                            <a href="../dubai.html">Hotels in Singapore</a>
+                            <a href="../dubai.html">Hotels in Mauritius</a>
+                            <a href="../dubai.html">Hotels in Seychelles</a>
+                            <a href="../dubai.html">Hotels in Sri Lanka</a>
+                            <a href="../dubai.html">Hotels in India</a>
+                            <a href="../dubai.html">Hotels in South Mumbai</a>
+                            <a href="../dubai.html">Hotels in Cappadocia</a>
+                            <a href="../dubai.html">Hotels in Langkawi</a>
+                            <a href="../dubai.html">Hotels in Mumbai Suburban</a>
+                            <a href="../dubai.html">Hotels in Andaman and Nicobar Islands</a>
+                            <a href="../dubai.html">Hotels in Wayanad District</a>
+                        </div>
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">Support & FAQs</h3><br>
+                            <a href="../Your bookings/yourbooking.html">Your bookings</a>
+                            <a href="../FAQs/FAQs.html">FAQs</a>
+                            <a href="../Contact Us/contact.html">Contact us</a>
+                            <a href="../Review a Property/review.html">Review a property</a>
+                        </div>
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">For suppliers, affiliates and the media</h3><br>
+                            <a href="#">Affiliate with us</a>
+                            <a href="#">Expedia Partner Solutions</a>
+                            <a href="#">Promote with us</a>
+                            <a href="#">Travel Agents</a>
+                        </div>
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">Policies</h3><br>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy</a>
+                            <a href="ContentGuidlines/cookies.html">Cookies</a>
+                            <a href="ContentGuidlines/contentGuidelines.html">Content guidelines and reporting content</a>
+                        </div>
+                        <div class="contents-informations">
+                            <h3 class="font-semibold">Other information</h3><br>
+                            <a href="../travel-guide/assetsMayuri-guide/about.html">About us</a>
+                            <a href="https://careers.expediagroup.com/#brands-hotels">Careers</a>
+                            <a href="travel-guide/travel-guides-footer.html">Travel Guides</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="lastfooter">
+                    <!-- <span> * Some hotels require you to cancel more than 24 hours before check-in. Details on site.</span> -->
+                </div>
+            </div>
+    </footer>
+
+
+
+<script src="card.js"></script>
 </body>
 </html>

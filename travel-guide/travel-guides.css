@@ -26,7 +26,7 @@ text-shadow: 0 2px 1px rgba(0, 0, 0, .3), 0 0 .5rem rgba(0, 0, 0, .5);
 .Go-Guides::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 79px;
     left: 0;
     width: 100%;
     height: 500px;
@@ -335,6 +335,42 @@ text-align: left
     margin-inline: auto;
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+      .global-navigation-footer{
+         /* border:2px dashed black; */
+         width: 80%;
+         inline-size: 100%;
+         max-inline-size: 100rem;
+         margin-inline: auto;
+         margin-top: 60px;
+         /* margin-left:200px; */
+      }
+      .items-contents{
+         display: flex;
+         gap: 1.5rem;
+      }
+      .contents-informations{
+         display: flex;
+         flex-direction: column;
+         
+      }
+      .contents-informations>h3{
+         font-family: system, -apple-system, BlinkMacSystemFont, SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+         font-size:0.8rem;
+      }
+      .contents-informations>a{
+         font-family: system, -apple-system, BlinkMacSystemFont, SFNSText-Regular, San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+         font-size: 11px;
+         font-weight: 600;
+         margin-bottom: 0.85rem;
+         text-decoration: none;
+         color:rgb(10, 68, 168);
+      }
+      .contents-informations>a:hover{
+         text-decoration: underline;
+      }
+
 /* --media-query--- */
 @media screen and (max-width:850px) {
     .overlay {
@@ -372,6 +408,8 @@ text-align: left
     }
 }
 
+
+
 @media screen and (max-width:450px) {
     .Go-Guides{
         height: 350px;
@@ -379,7 +417,7 @@ text-align: left
     .Go-Guides::before {
         content: '';
         position: absolute;
-        top: 0;
+        top: 77px;
         left: 0;
         width: 100%;
         height: 350px;
@@ -562,6 +600,7 @@ text-align: left
             width: 90%;
             margin-inline: auto;
         }
+        
         
 
 }
