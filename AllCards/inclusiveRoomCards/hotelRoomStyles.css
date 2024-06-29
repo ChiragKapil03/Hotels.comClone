@@ -69,7 +69,7 @@
   transform: scale(0.97);
 }
 
-/*------ Media Queires----- */
+/*------ Media Queries----- */
 
 @media screen and (max-width: 912px) {
   .container {
@@ -94,18 +94,49 @@
     flex-direction: row;
   }
 
+  .card-container .properties .howSort {
+    text-align: center;
+    margin-inline: auto;
+  }
+
   .sidebarSection_mainSection .card-container {
     width: 100%;
   }
+
+  .card-container .single-cardBox .relative {
+    width: 50%;
+  }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .card-container .single-cardBox .hotel-details .reviews-prices {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .card-container .reviews,
-  .card-container .prices {
+  .card-container .reviews-prices .reviews,
+  .card-container .reviews-prices .prices {
     width: 100%;
+  }
+} */
+
+@media screen and (max-width: 580px) {
+  .card-container .single-cardBox {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card-container .single-cardBox .relative,
+  .card-container .single-cardBox .hotel-details {
+    width: 100%;
+  }
+
+  .card-container .single-cardBox .relative .img-container img {
+    object-position: center;
+    object-fit: cover;
+    /* height: 20rem; */
+    height: 38vh;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1rem;
   }
 }
