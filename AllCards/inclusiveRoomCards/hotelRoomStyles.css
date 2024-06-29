@@ -121,6 +121,31 @@
 } */
 
 @media screen and (max-width: 580px) {
+  .Where-to-section .whereTo {
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+
+  .Where-to-section .whereTo .sections {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+
+  .Where-to-section .whereTo button {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Where-to-section .whereTo button p {
+    display: flex;
+  }
+
   .card-container .single-cardBox {
     flex-direction: column;
     gap: 1.5rem;
